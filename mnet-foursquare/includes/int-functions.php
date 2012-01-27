@@ -67,7 +67,7 @@ if ( !$url ) {
   if ( strtolower($_SERVER['REQUEST_METHOD']) == 'post' ) {
     curl_setopt( $ch, CURLOPT_POST, true );
     curl_setopt( $ch, CURLOPT_POSTFIELDS, $_POST );
-    curl_setopt($ch, CURLOPT_HTTPGET, true);
+    curl_setopt($ch, CURLOPT_HTTPGET, true);    //AAV: Pasar todo a GET con CURLOPT_HTTPGET ya que GitHub trabaja con GET.
   }
   
   if ( $_GET['send_cookies'] ) {
