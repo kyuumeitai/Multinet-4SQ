@@ -28,7 +28,12 @@ jQuery(document).ready(function($){
 				'action' : 'm4sq-getdata'
 				},
 			'success': function(response){
-				m4sq_trace(response);
+				if(response.contents.response.venue){
+					var avenida = response.contents.response.venue,
+					container;
+					container = ich.m4sq(avenida);
+					$('#m4sq-data').append(container);
+				}
 			}
 		});
 	};

@@ -10,7 +10,7 @@ alex@lunamedia.cl
 
 */
 function m4sq_script(){
-	wp_enqueue_script( 'm4sq_plugin', plugins_url('mnet-foursquare/scripts/jquery.form.js'), array('jquery') );
+	wp_enqueue_script( 'm4sq_plugin', plugins_url('mnet-foursquare/scripts/ICanHaz.min.js'), array('jquery') );
 	wp_enqueue_script( 'm4sq_script', plugins_url('mnet-foursquare/scripts/m4sq_calls.js'), array('jquery','m4sq_plugin') );
 	wp_localize_script( 'm4sq_script', 'm4sq_script', array(
 		'uri' => plugins_url('mnet-foursquare/includes/parser.php')
